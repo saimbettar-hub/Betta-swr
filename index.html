@@ -3,55 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Betta Farm - ร้านขายปลากัดเกรดพรีเมียม</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Saim wild betta - จำหน่ายปลากัดป่าและปลากัดแฟนซี</title>
+    <style>
+        /* สไตล์หลักของเว็บไซต์ (โทนสีดำ-เหลืองดุๆ สไตล์เดิม) */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0b0b0b;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #141414;
+            border-bottom: 2px solid #ffcc00;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .brand-name {
+            color: #ffcc00;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .hero-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to bottom, #141414, #0b0b0b);
+        }
+        .hero-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .hero-section p {
+            color: #cccccc;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .btn-main {
+            background-color: #ffcc00;
+            color: #000000;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn-main:hover {
+            background-color: #e6b800;
+        }
+        .product-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-title {
+            color: #ffcc00;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            background-color: #141414;
+            border: 1px solid #222222;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .product-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .product-price {
+            color: #ffcc00;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .contact-section {
+            background-color: #141414;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 2px solid #ffcc00;
+        }
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-item {
+            margin-bottom: 15px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .contact-label {
+            color: #ffcc00;
+            font-weight: bold;
+            width: 120px;
+            flex-shrink: 0;
+        }
+        .contact-value a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .contact-value a:hover {
+            text-decoration: underline;
+            color: #ffcc00;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- ส่วนหัวเว็บไซต์ (Header & Navigation) -->
+    <!-- ส่วนหัวเว็บไซต์ (Header) -->
     <header>
-        <div class="logo">เสือซุ่ม Betta Farm</div>
+        <div class="logo-container">
+            <div class="brand-name">Saim wild betta</div>
+        </div>
         <nav>
             <a href="#home">หน้าแรก</a>
-            <a href="#shop">เลือกชมปลา</a>
+            <a href="#products">เลือกชมปลา</a>
             <a href="#contact">ติดต่อเรา</a>
         </nav>
     </header>
 
-    <!-- ส่วนแบนเนอร์หลัก (Hero Section) -->
-    <section id="home" class="hero">
-        <h1>จำหน่ายปลากัดป่า และ ปลากัดแฟนซี เกรดคุณภาพ</h1>
-        <p>ปลาแข็งแรง สีสันจัดจ้าน แข็งแรง พร้อมจัดส่งทั่วประเทศ</p>
-        <a href="#shop" class="btn">ดูปลาพร้อมขาย</a>
+    <!-- ส่วนต้อนรับ (Hero Section) -->
+    <section class="hero-section" id="home">
+        <h1>จำหน่ายปลากัดป่า และ ปลากัดแฟนซีเกรดคุณภาพ</h1>
+        <p>พบกับปลาสายพันธุ์ป่าแท้ๆ และสายพันธุ์แฟนซีที่มีทั้งความสวยงามและแข็งแรง พร้อมจัดส่งทั่วประเทศ</p>
+        <a href="#products" class="btn-main">ดูปลาพร้อมขาย</a>
     </section>
 
-    <!-- ส่วนรายการสินค้า (Product Grid) -->
-    <section id="shop" class="products">
-        <h2>ปลาพร้อมย้ายฟอร์มประจำสัปดาห์</h2>
-        <div class="grid">
-            <!-- การ์ดปลาตัวที่ 1 -->
-            <div class="card">
-                <img src="https://via.placeholder.com/300x200" alt="ปลากัด">
-                <h3>มหาชัย (Maha Chai Wild Type)</h3>
-                <p class="price">350 บาท</p>
-                <button class="btn-buy" onclick="orderFish('มหาชัย (Maha Chai Wild Type)')">สั่งซื้อผ่านไลน์</button>
+    <!-- ส่วนรายการสินค้า (Products) -->
+    <section class="product-section" id="products">
+        <div class="section-title">ปลาพร้อมย้ายฟอร์มประจำสัปดาห์</div>
+        <div class="product-grid">
+            <!-- ปลากัดป่ามหาชัย -->
+            <div class="product-card">
+                <!-- อย่าลืมเช็กชื่อไฟล์รูปภาพในโฟลเดอร์ให้ตรงกับ src นะครับพี่ -->
+                <img src="mahachai.jpg" alt="มหาชัย (Maha Chai Wild Type)">
+                <div class="product-name">มหาชัย (Maha Chai Wild Type)</div>
+                <div class="product-price">350 บาท</div>
             </div>
-            <!-- การ์ดปลาตัวที่ 2 -->
-            <div class="card">
-                <img src="https://via.placeholder.com/300x200" alt="ปลากัด">
-                <h3>เบญจรงค์เหลือง (Yellow Benjarong)</h3>
-                <p class="price">450 บาท</p>
-                <button class="btn-buy" onclick="orderFish('เบญจรงค์เหลือง (Yellow Benjarong)')">สั่งซื้อผ่านไลน์</button>
+            <!-- ปลากัดเบญจรงค์เหลือง -->
+            <div class="product-card">
+                <img src="yellow_benjarong.jpg" alt="เบญจรงค์เหลือง (Yellow Benjarong)">
+                <div class="product-name">เบญจรงค์เหลือง (Yellow Benjarong)</div>
+                <div class="product-price">450 บาท</div>
             </div>
         </div>
     </section>
 
-    <!-- ส่วนท้ายเว็บ & ช่องทางติดต่อ (Footer) -->
-    <footer id="contact">
-        <p>© 2026 Betta Farm. All Rights Reserved.</p>
-        <p>สนใจราคาส่ง หรือสอบถามเพิ่มเติม ทักแชทได้ตลอด 24 ชม.</p>
-    </footer>
+    <!-- ส่วนช่องทางการติดต่อใหม่ (Contact Section) -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="section-title" style="margin-bottom: 25px;">ช่องทางการติดต่อสอบถาม</div>
+            
+            <div class="contact-item">
+                <span class="contact-label">Facebook:</span>
+                <span class="contact-value">Juli us</span>
+            </div>
+            
+            <div class="contact-item">
+                <span class="contact-label">เพจร้าน:</span>
+                <span class="contact-value">Saimwildbettar</span>
+            </div>
+            
+            <div class="contact-item">
+                <span class="contact-label">TikTok:</span>
+                <span class="contact-value">Saimwildbettar</span>
+            </div>
+            
+            <div class="contact-item">
+                <span class="contact-label">Line ID:</span>
+                <span class="contact-value" style="color: #06c755; font-weight: bold;">rrrpppk</span>
+            </div>
+            
+            <div class="contact-item">
+                <span class="contact-label">เบอร์โทรศัพท์:</span>
+                <span class="contact-value"><a href="tel:0972296967">097-229-6967</a></span>
+            </div>
+            
+            <div class="contact-item">
+                <span class="contact-label">อีเมล:</span>
+                <span class="contact-value">Saim wild bettar</span>
+            </div>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
 </body>
 </html>
