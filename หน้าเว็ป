@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betta Farm - ร้านขายปลากัดเกรดพรีเมียม</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ส่วนหัวเว็บไซต์ (Header & Navigation) -->
+    <header>
+        <div class="logo">เสือซุ่ม Betta Farm</div>
+        <nav>
+            <a href="#home">หน้าแรก</a>
+            <a href="#shop">เลือกชมปลา</a>
+            <a href="#contact">ติดต่อเรา</a>
+        </nav>
+    </header>
+
+    <!-- ส่วนแบนเนอร์หลัก (Hero Section) -->
+    <section id="home" class="hero">
+        <h1>จำหน่ายปลากัดป่า และ ปลากัดแฟนซี เกรดคุณภาพ</h1>
+        <p>ปลาแข็งแรง สีสันจัดจ้าน แข็งแรง พร้อมจัดส่งทั่วประเทศ</p>
+        <a href="#shop" class="btn">ดูปลาพร้อมขาย</a>
+    </section>
+
+    <!-- ส่วนรายการสินค้า (Product Grid) -->
+    <section id="shop" class="products">
+        <h2>ปลาพร้อมย้ายฟอร์มประจำสัปดาห์</h2>
+        <div class="grid">
+            <!-- การ์ดปลาตัวที่ 1 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="ปลากัด">
+                <h3>มหาชัย (Maha Chai Wild Type)</h3>
+                <p class="price">350 บาท</p>
+                <button class="btn-buy" onclick="orderFish('มหาชัย (Maha Chai Wild Type)')">สั่งซื้อผ่านไลน์</button>
+            </div>
+            <!-- การ์ดปลาตัวที่ 2 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="ปลากัด">
+                <h3>เบญจรงค์เหลือง (Yellow Benjarong)</h3>
+                <p class="price">450 บาท</p>
+                <button class="btn-buy" onclick="orderFish('เบญจรงค์เหลือง (Yellow Benjarong)')">สั่งซื้อผ่านไลน์</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ส่วนท้ายเว็บ & ช่องทางติดต่อ (Footer) -->
+    <footer id="contact">
+        <p>© 2026 Betta Farm. All Rights Reserved.</p>
+        <p>สนใจราคาส่ง หรือสอบถามเพิ่มเติม ทักแชทได้ตลอด 24 ชม.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
